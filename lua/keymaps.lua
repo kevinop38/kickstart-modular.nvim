@@ -61,3 +61,6 @@ vim.keymap.set('n', '<leader>b!', ':bd!<CR>', { desc = 'Force Delete Current Buf
 -- Yanking into clipboard
 vim.keymap.set('v', '<leader>y', [["+y]], { desc = 'Yanking into Clipboard' })
 vim.keymap.set('i', '<C-l>', '<Right>', { noremap = true })
+
+vim.keymap.set('n', '<leader>m', ':Markview<CR>', { desc = 'Toggles `markview` previews globally.' })
+vim.keymap.set('n', '<leader>sv', ':Markview linewiseToggle<CR>', { desc = 'Toggles `line-wise` hybrid mode.' })

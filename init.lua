@@ -19,15 +19,16 @@ require 'lazy-plugins'
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
-vim.g.clipboard = {
-  name = 'WslClipboard',
-  copy = {
-    ['+'] = 'clip.exe',
-    ['*'] = 'clip.exe',
-  },
-  paste = {
-    ['+'] = 'powershell.exe Get-Clipboard',
-    ['*'] = 'powershell.exe Get-Clipboard',
-  },
-  cache_enabled = 0,
-}
+-- vim.g.clipboard = {
+--   name = 'WslClipboard',
+--   copy = {
+--     ['+'] = 'clip.exe',
+--     ['*'] = 'clip.exe',
+--   },
+--   paste = {
+--     ['+'] = 'powershell.exe Get-Clipboard',
+--     ['*'] = 'powershell.exe Get-Clipboard',
+--   },
+--   cache_enabled = 0,
+-- }
+-- vim.opt.fileformats = { 'unix', 'dos' }

@@ -1,3 +1,4 @@
+-- Adds lightweight editing utilities, text objects, and a status line.
 return {
   { -- Collection of various small independent plugins/modules
     'echasnovski/mini.nvim',

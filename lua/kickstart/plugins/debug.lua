@@ -1,4 +1,4 @@
--- debug.lua
+-- Configures debugging support and a debugger UI, primarily for Go.
 --
 -- Shows how to use the DAP plugin to debug your code.
 --

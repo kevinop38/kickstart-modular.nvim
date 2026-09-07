@@ -1,3 +1,4 @@
+-- Provides fast autocompletion with LSP, path, and snippet sources.
 return {
   { -- Autocompletion
     'saghen/blink.cmp',
@@ -28,7 +29,21 @@ return {
             end,
           },
         },
-        opts = {},
+        opts = {
+          -- Keep completed snippets around only while they are actively usable.
+          delete_check_events = 'TextChanged',
+        },
+        config = function(_, opts)
+          local luasnip = require 'luasnip'
+          luasnip.setup(opts)
+
+          -- Cycle alternatives in choice nodes (for example, snippet variants).
+          vim.keymap.set({ 'i', 's' }, '<C-j>', function()
+            if luasnip.choice_active() then
+              luasnip.change_choice(1)
+            end
+          end, { desc = 'LuaSnip: next choice' })
+        end,
       },
       'folke/lazydev.nvim',
     },
@@ -71,7 +86,8 @@ return {
       completion = {
         -- By default, you may press `<c-space>` to show the documentation.
         -- Optionally, set `auto_show = true` to show the documentation after a delay.
-        documentation = { auto_show = false, auto_show_delay_ms = 500 },
+        documentation = { auto_show = true, auto_show_delay_ms = 150 },
+        menu = { draw = { treesitter = { 'lsp' } } },
       },
 
       sources = {

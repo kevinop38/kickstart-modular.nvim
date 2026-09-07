@@ -1,3 +1,4 @@
+-- Formats buffers with external tools and an optional LSP fallback.
 return {
   { -- Autoformat
     'stevearc/conform.nvim',

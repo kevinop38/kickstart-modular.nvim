@@ -1,4 +1,4 @@
--- NOTE: Plugins can specify dependencies.
+-- Provides fuzzy finding for files, text, help, diagnostics, and LSP data.
 --
 -- The dependencies are proper plugin specifications as well - anything
 -- you do for a plugin at the top level, you can do for a dependency.

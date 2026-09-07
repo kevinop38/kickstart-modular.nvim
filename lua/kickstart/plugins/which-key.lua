@@ -1,4 +1,4 @@
--- NOTE: Plugins can also be configured to run Lua code when they are loaded.
+-- Displays available key bindings in a contextual popup.
 --
 -- This is often very useful to both group configuration, as well as handle
 -- lazy loading plugins that don't need to be loaded immediately at startup.

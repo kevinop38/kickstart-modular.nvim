@@ -1,3 +1,4 @@
+-- Displays indentation guides and highlights the current scope.
 return {
   { -- Add indentation guides even on blank lines
     'lukas-reineke/indent-blankline.nvim',

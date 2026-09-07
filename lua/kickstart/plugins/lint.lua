@@ -1,3 +1,4 @@
+-- Runs configured external linters and publishes their diagnostics.
 return {
 
   { -- Linting

@@ -1,4 +1,4 @@
--- Alternatively, use `config = function() ... end` for full control over the configuration.
+-- Shows Git changes in the sign column and provides hunk operations.
 -- If you prefer to call `setup` explicitly, use:
 --    {
 --        'lewis6991/gitsigns.nvim',
